@@ -4,9 +4,7 @@
 <%@ page import="com.exemple.model.Produit" %>
 <%@ page import="com.exemple.dao.ProduitDaoImpl" %>
 
-<%-- Authentication Check --%>
 <%
-    // Retrieve the User object from session
     User user = (User) session.getAttribute("user");
     if (user == null) {
         // Redirect to login if user not authenticated

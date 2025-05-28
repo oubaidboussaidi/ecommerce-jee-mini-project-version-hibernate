@@ -66,7 +66,6 @@ public class ProduitDaoImpl implements IProduitDao {
         }
     }
 
-    // Optional: List all products
     public List<Produit> getAllProduits() {
         List<Produit> produits;
         try (Session session = factory.getCurrentSession()) {

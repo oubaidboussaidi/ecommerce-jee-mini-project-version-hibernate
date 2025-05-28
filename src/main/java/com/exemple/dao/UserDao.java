@@ -20,10 +20,8 @@ public class UserDao {
     }
 
     public UserDao() {
-        // constructeur vide, factory est statique
     }
 
-    // Save new user
     public void save(User u) {
         try (Session session = factory.getCurrentSession()) {
             session.beginTransaction();
@@ -35,7 +33,6 @@ public class UserDao {
         }
     }
 
-    // Verify user credentials and retrieve role
     public User verifyUser(String login, String password) {
         User verifiedUser = null;
         try (Session session = factory.getCurrentSession()) {
@@ -55,7 +52,6 @@ public class UserDao {
         return verifiedUser;
     }
 
-    // Check if email exists
     public boolean isEmailExists(String email) {
         try (Session session = factory.getCurrentSession()) {
             session.beginTransaction();
@@ -74,7 +70,6 @@ public class UserDao {
         }
     }
 
-    // Fetch all users
     public List<User> getAllUsers() {
         List<User> users = null;
         try (Session session = factory.getCurrentSession()) {
@@ -87,7 +82,6 @@ public class UserDao {
         return users;
     }
 
-    // Search users by email
     public List<User> searchUsersByEmail(String emailFilter) {
         List<User> users = null;
         try (Session session = factory.getCurrentSession()) {
