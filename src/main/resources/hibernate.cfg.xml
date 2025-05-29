@@ -5,7 +5,7 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db_mvc_cat</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
-		<property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.current_session_context_class">thread</property>
 
         <!-- JDBC dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
@@ -14,11 +14,11 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
-        <!-- Drop and re-create the database schema on startup -->
+        <!-- Automatically update schema -->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!-- Your annotated entity classes -->
+        <!-- Entity mappings -->
         <mapping class="com.exemple.model.User"/>
-        
+        <mapping class="com.exemple.model.Produit"/> <!-- ✅ ADD THIS -->
     </session-factory>
 </hibernate-configuration>
